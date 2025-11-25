@@ -623,8 +623,8 @@ body {
 .btn-agendar-detail {
     display: inline-block;
     padding: 1rem 2rem;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #203A52;
+    color: #203A52;
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
@@ -632,8 +632,8 @@ body {
 }
 
 .btn-agendar-detail:hover {
-    background: white;
-    color: #203A52;
+    background: #203A52;
+    color: white;
 }
 
 .electro-image img {
