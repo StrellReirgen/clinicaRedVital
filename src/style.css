@@ -623,17 +623,19 @@ body {
 .btn-agendar-detail {
     display: inline-block;
     padding: 1rem 2rem;
-    border: 2px solid #203A52;
-    color: #203A52;
+    background: #203A52;
+    color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-agendar-detail:hover {
-    background: #203A52;
-    color: white;
+    background: white;
+    color: #203A52;
+    cursor: pointer;
 }
 
 .electro-image img {
@@ -754,6 +756,116 @@ body {
     font-weight: 500;
 }
 
+/* Professionals Section - Versión Mejorada */
+.professionals {
+    padding: 5rem 0;
+    background: white;
+}
+
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.professional-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 280px; /* Altura mínima consistente */
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background: #203A52;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    flex-shrink: 0; /* Evita que el header se encoja */
+}
+
+.card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+.professionals-list {
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.professional-name {
+    padding: 0.5rem 0;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+
+.professional-name:last-child {
+    border-bottom: none;
+}
+
+.schedule {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #5abbf7;
+    margin-top: auto; /* Esto empuja el horario hacia abajo */
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.schedule i {
+    color: #5abbf7;
+    font-size: 1.1rem;
+    min-width: 20px;
+    margin-top: 2px; /* Alinea mejor el icono */
+}
+
+.schedule span {
+    color: #203A52;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Animaciones para las tarjetas */
+.professional-card:nth-child(1) { animation-delay: 0.1s; }
+.professional-card:nth-child(2) { animation-delay: 0.2s; }
+.professional-card:nth-child(3) { animation-delay: 0.3s; }
+.professional-card:nth-child(4) { animation-delay: 0.4s; }
+.professional-card:nth-child(5) { animation-delay: 0.5s; }
+.professional-card:nth-child(6) { animation-delay: 0.6s; }
+.professional-card:nth-child(7) { animation-delay: 0.7s; }
+.professional-card:nth-child(8) { animation-delay: 0.8s; }
+.professional-card:nth-child(9) { animation-delay: 0.9s; }
+
 /* Responsive Design */
 
 @media (max-width: 968px) {
@@ -857,6 +969,24 @@ body {
     .whatsapp-btn span {
         font-size: 0.8rem;
     }
+
+    .professionals-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .professional-card {
+        max-width: 100%;
+        min-height: 260px; /* Ajuste para móvil */
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .schedule {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -886,6 +1016,27 @@ body {
     
     .about-description p {
         font-size: 1rem;
+    }
+    .professionals {
+        padding: 3rem 0;
+    }
+    
+    .professional-card {
+        min-height: 250px;
+    }
+    
+    .schedule {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .schedule i {
+        margin-top: 2px;
+    }
+    
+    .schedule span {
+        font-size: 0.9rem;
     }
 }
 
